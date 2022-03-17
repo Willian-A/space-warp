@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Poppins";
+  background-color: gray;
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+.buttons {
+  position: absolute;
+  width: 100%;
+  max-width: 225px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.buttons button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  transition: 250ms;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+}
+
+.buttons button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
