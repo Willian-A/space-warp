@@ -22,7 +22,7 @@ let LINE_COUNT = 5000;
 let geom = new THREE.BufferGeometry();
 geom.setAttribute(
   "position",
-  new THREE.BufferAttribute(new Float32Array(6 * LINE_COUNT), 3)
+  new THREE.BufferAttribute(new Float32Array(15000), 3)
 );
 geom.setAttribute(
   "velocity",
