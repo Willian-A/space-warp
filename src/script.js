@@ -35,7 +35,10 @@ let va = vel.array;
 
 // Init
 
+let loader = new THREE.TextureLoader();
 scene = new THREE.Scene();
+scene.background = loader.load("textures/fundo.png");
+scene.background.opacity = 0.1;
 // scene.fog = new THREE.Fog("#000", 1, 450);
 // const axesHelper = new THREE.AxesHelper(5);
 // scene.add(axesHelper);
@@ -128,9 +131,9 @@ let acceleration = 0.0101;
 let nebulaAcc = 0.2;
 
 function speedUp() {
-  velocity = 0.15;
-  acceleration = 0.16;
-  nebulaAcc = 1;
+  velocity = 0.25;
+  acceleration = 0.27;
+  nebulaAcc = 3;
 }
 function speedDown() {
   velocity = 0.01;
@@ -145,7 +148,6 @@ button_speedDown.addEventListener("click", speedDown);
 
 // Cloud
 const cloudParticles = [];
-let loader = new THREE.TextureLoader();
 loader.load("textures/smoke.png", function (texture) {
   //texture is loaded
   const cloudGeo = new THREE.PlaneBufferGeometry(500, 500);
